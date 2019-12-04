@@ -9,7 +9,7 @@ pipeline {
       }
       stage('Kubectl Check') {
          steps {
-            sh 'kubectl --help'
+            sh 'kubectl get nodes -o wide'
          }
       }
    }
