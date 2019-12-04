@@ -1,16 +1,21 @@
 pipeline {
-   agent any
+    agent any
 
-   stages {
-      stage('Hello') {
-         steps {
-            echo 'Hello World'
-         }
-      }
-      stage('Kubectl Check') {
-         steps {
-            sh 'kubectl get nodes -o wide'
-         }
-      }
-   }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..\n\n'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..\n\n'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....\n\n'
+            }
+        }
+    }
 }
