@@ -7,5 +7,10 @@ pipeline {
             echo 'Hello World'
          }
       }
+      stage('Kubectl Check') {
+         steps {
+            sh 'kubectl --help'
+         }
+      }
    }
 }
